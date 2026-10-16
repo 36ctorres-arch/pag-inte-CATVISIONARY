@@ -1,180 +1,554 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#061b35">
-  <meta name="description" content="VISIONARY: descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
+  <meta name="theme-color" content="#061326">
+  <meta name="description" content="VISIONARY: nutrición OMNILIFE, belleza SEYTÚ y oportunidades para emprender.">
+  <title>VISIONARY 💎 | Tu próximo paso comienza acá</title>
 
-  <!-- ========================================================= -->
-  <!-- METAETIQUETAS OPEN GRAPH (Facebook, WhatsApp e Instagram) -->
-  <!-- ========================================================= -->
+  <!-- VISTA PREVIA PARA FACEBOOK Y WHATSAPP -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="VISIONARY 💎 | Tu próximo paso comienza acá">
-  <meta property="og:description" content="Descubrí nutrición OMNILIFE, cosmética SEYTÚ y la oportunidad para emprender tu propio negocio.">
+  <meta property="og:description" content="Descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
   <meta property="og:url" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/">
-  
-  <!-- Imagen de portada (Pública y accesible en HD para evitar el error 404) -->
-  <!-- Si subes tu propia portada a GitHub como 'portada-visionary.png', reemplaza la URL de abajo por: https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/portada-visionary.png -->
-  <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80">
-  <meta property="og:image:alt" content="Logo Diamante VISIONARY">
+  <meta property="og:image" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/portada-visionary.png">
+  <meta property="og:image:alt" content="VISIONARY, bienestar, belleza y emprendimiento">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:locale" content="es_AR">
+  <meta property="og:image:type" content="image/png">
 
-  <!-- Metaetiquetas para Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@visionary">
-  <meta name="twitter:title" content="VISIONARY 💎 | Tu próximo paso comienza acá">
-  <meta name="twitter:description" content="Descubrí nutrición OMNILIFE, cosmética SEYTÚ y la oportunidad para emprender tu propio negocio.">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80">
-
-  <title>VISIONARY 💎 | Bienestar, belleza y futuro</title>
+  <meta name="twitter:title" content="VISIONARY 💎">
+  <meta name="twitter:description" content="Bienestar, belleza y emprendimiento.">
+  <meta name="twitter:image" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/portada-visionary.png">
 
   <style>
     :root {
-      --azul: #061b35;
-      --azul-glow: #103868;
-      --verde-omni: #0db37b;
-      --rosa-seytu: #ff528c;
-      --oro-emprender: #ffca40;
-      --oro-light: #fff2b3;
-      --oro-dark: #b8860b;
-      --texto: #f8f5eb;
+      --navy: #061326;
+      --navy2: #10294b;
+      --gold: #f3c85b;
+      --gold-light: #fff1b8;
+      --white: #f9f6ee;
+      --muted: #c3cfdf;
+      --green: #25c995;
+      --pink: #ff76a5;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 20px;
     }
 
     body {
       margin: 0;
-      color: var(--texto);
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      background: #020b16;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(13, 179, 123, 0.25) 0%, transparent 45%),
-        radial-gradient(circle at 15% 50%, rgba(255, 82, 140, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 85% 75%, rgba(255, 202, 64, 0.15) 0%, transparent 40%);
-      background-attachment: fixed;
+      color: var(--white);
+      font-family: system-ui, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 5%, #137d6633, transparent 35%),
+        radial-gradient(ellipse at 90% 40%, #d9a72a20, transparent 38%),
+        var(--navy);
       overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; color: inherit; }
 
-    .contenedor {
-      width: min(1120px, 92%);
+    .wrap {
+      width: min(1100px, 92%);
       margin: auto;
     }
 
-    /* HEADER & PORTADA */
     header {
-      text-align: center;
-      padding: 40px 0 10px;
-    }
-
-    .logo-contenedor {
-      display: inline-flex;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 10px 0;
+      gap: 14px;
+      padding: 20px 0;
+      border-bottom: 1px solid #f3c85b33;
     }
 
-    .diamante-header {
-      color: var(--oro-emprender);
-      font-size: clamp(32px, 6vw, 55px);
-      filter: drop-shadow(0 0 15px rgba(255, 202, 64, 0.8));
-      animation: pulsoBrillo 2.5s ease-in-out infinite;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: clamp(19px, 4vw, 27px);
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 50%, #e1b12c 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: clamp(42px, 9vw, 82px);
-      letter-spacing: 6px;
-      font-weight: 800;
-      margin: 0;
-      text-shadow: 0 0 35px rgba(245, 212, 119, 0.3);
+    .gem {
+      color: var(--gold);
+      font-size: 32px;
+      filter: drop-shadow(0 0 12px #f3c85b88);
+      animation: glow 2.5s infinite;
     }
 
-    .sublogo {
-      letter-spacing: 4px;
+    .brand-name {
+      background: linear-gradient(120deg, #fff, var(--gold-light), var(--gold));
+      color: transparent;
+      background-clip: text;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
       font-size: 12px;
-      font-weight: 600;
-      color: #f8e7b1;
-      margin-top: 10px;
-      text-transform: uppercase;
-      opacity: 0.9;
+      color: var(--muted);
     }
 
-    /* HERO */
+    nav a { transition: color .2s; }
+    nav a:hover { color: var(--gold); }
+
     .hero {
       text-align: center;
-      padding: 35px 0 40px;
+      padding: 65px 0 55px;
     }
 
-    .diamante-icono {
-      display: block;
-      margin: 0 auto 15px;
-      width: 70px;
-      height: 70px;
-      filter: drop-shadow(0 0 20px rgba(255, 202, 64, 0.6));
-      animation: pulsoBrillo 3s ease-in-out infinite;
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid #f3c85b66;
+      border-radius: 30px;
+      background: #f3c85b0c;
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .hero-gem {
+      font-size: 65px;
+      margin: 22px 0 5px;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px #f3c85b88);
     }
 
     h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 6vw, 62px);
-      line-height: 1.15;
-      margin: 20px auto 18px;
+      font: 800 clamp(40px, 9vw, 78px)/1.1 Georgia, serif;
+      margin: 10px 0 18px;
+      letter-spacing: 3px;
     }
 
-    h1 span {
-      background: linear-gradient(90deg, #ffca40, #fff2b3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 25px rgba(255, 202, 64, 0.3);
+    .gold-text {
+      background: linear-gradient(100deg, #fff1b8, #f3c85b, #fff8d9);
+      color: transparent;
+      background-clip: text;
     }
 
     .intro {
-      max-width: 680px;
+      max-width: 700px;
       margin: auto;
-      color: #e1ece7;
+      color: #dce5ef;
       font-size: 17px;
       line-height: 1.8;
     }
 
-    .frase {
-      color: var(--oro-light);
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: clamp(20px, 3.5vw, 28px);
-      margin-top: 25px;
-      text-shadow: 0 0 10px rgba(255, 242, 179, 0.2);
+    .phrase {
+      color: var(--gold-light);
+      font: italic clamp(20px, 4vw, 27px) Georgia, serif;
+      margin: 24px 0;
     }
 
-    /* SECCIONES Y TARJETAS */
-    .secciones {
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 19px;
+      border: 1px solid var(--gold);
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #061326;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s;
+      box-shadow: 0 7px 22px #f3c85b20;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 28px #f3c85b44;
+    }
+
+    .btn-outline {
+      background: #ffffff08;
+      border-color: #ffffff40;
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .section-heading {
+      text-align: center;
+      padding: 15px 0 25px;
+    }
+
+    .section-heading h2 {
+      font: 700 clamp(28px, 5vw, 40px) Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-      padding: 20px 0 60px;
+      gap: 22px;
+      padding: 10px 0 65px;
     }
 
-    .tarjeta {
+    .card {
+      --accent: var(--gold);
       position: relative;
       overflow: hidden;
+      padding: 23px;
+      border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
       border-radius: 24px;
-      padding: 25px 20px 30px;
+      background: linear-gradient(150deg, #112b4c, #071426);
+      box-shadow: 0 15px 35px #0003;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -65px;
+      right: -60px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .13;
+      filter: blur(35px);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 22px 45px #0006;
+    }
+
+    .omni { --accent: var(--green); }
+    .seytu { --accent: var(--pink); }
+    .emprender { --accent: var(--gold); }
+
+    .visual {
+      display: grid;
+      place-items: center;
+      height: 145px;
+      margin-bottom: 20px;
+      border-radius: 17px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 20%, transparent), #ffffff05 70%);
+      border: 1px solid #ffffff0d;
+    }
+
+    .visual span {
+      font-size: 66px;
+      transition: transform .35s;
+      filter: drop-shadow(0 8px 15px #0004);
+    }
+
+    .card:hover .visual span {
+      transform: scale(1.16) rotate(-5deg);
+    }
+
+    .tag {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin: 9px 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+      min-height: 75px;
+    }
+
+    .card .btn {
+      display: flex;
+      width: 100%;
+      margin-top: 12px;
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .card .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: #ffffff30;
+    }
+
+    .about {
+      margin-bottom: 60px;
+      padding: 35px 25px;
       text-align: center;
-      background: rgba
+      border: 1px solid #f3c85b44;
+      border-radius: 24px;
+      background: linear-gradient(120deg, #f3c85b0c, #ffffff05);
+    }
+
+    .about h2 {
+      font: 700 clamp(27px, 5vw, 38px) Georgia, serif;
+    }
+
+    .about p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    footer {
+      border-top: 1px solid #ffffff1b;
+      padding: 25px 0 90px;
+      text-align: center;
+      color: #aebdd0;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #20c978;
+      color: #052216;
+      font-size: 27px;
+      box-shadow: 0 8px 25px #0008;
+      border: 2px solid #ffffff55;
+      animation: float 3s infinite;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s, transform .7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 7px #f3c85b55); }
+      50% { filter: drop-shadow(0 0 19px #f3c85bcc); }
+    }
+
+    @media (max-width: 780px) {
+      header { align-items: flex-start; }
+      nav { max-width: 165px; justify-content: flex-end; }
+      .cards { grid-template-columns: 1fr; max-width: 520px; margin: auto; }
+      .card p { min-height: 0; }
+      .hero { padding-top: 48px; }
+    }
+
+    @media (max-width: 430px) {
+      .brand { letter-spacing: 1px; }
+      .gem { font-size: 25px; }
+      .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrap">
+    <a class="brand" href="#inicio" aria-label="VISIONARY inicio">
+      <span class="gem">◆</span>
+      <span class="brand-name">VISIONARY</span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#omnilife">OMNILIFE</a>
+      <a href="#seytu">SEYTÚ</a>
+      <a href="#emprender">EMPRENDÉ</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero wrap">
+      <div class="eyebrow">✦ BIENESTAR · BELLEZA · OPORTUNIDAD ✦</div>
+      <div class="hero-gem" aria-hidden="true">💎</div>
+      <h1><span class="gold-text">VISIONARY</span></h1>
+      <p class="intro">
+        Descubrí nuevas posibilidades de bienestar, cuidado personal
+        y emprendimiento digital. Explorá nuestras propuestas y elegí
+        el próximo paso para vos.
+      </p>
+      <p class="phrase">Tu próximo paso comienza acá.</p>
+
+      <div class="actions">
+        <a class="btn" href="#propuestas">✨ Descubrir propuestas</a>
+        <a class="btn btn-outline"
+           href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20VISIONARY"
+           target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="propuestas">
+      <div class="section-heading reveal">
+        <h2>Elegí tu camino</h2>
+        <p>Explorá las propuestas y tocá los botones para recibir información personalizada.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card omni reveal" id="omnilife">
+          <div class="visual" aria-hidden="true"><span>🌿</span></div>
+          <span class="tag">Nutrición y bienestar</span>
+          <h3>OMNILIFE</h3>
+          <p>Conocé las opciones de nutrición y bienestar y consultá sobre los productos.</p>
+          <a class="btn"
+             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20nutrici%C3%B3n%20OMNILIFE"
+             target="_blank" rel="noopener">Conocer OMNILIFE ↗</a>
+          <a class="btn btn-outline"
+             href="https://guia-seytu.omnilife.com/argentina"
+             target="_blank" rel="noopener">Ver guía de productos ↗</a>
+        </article>
+
+        <article class="card seytu reveal" id="seytu">
+          <div class="visual" aria-hidden="true"><span>✨</span></div>
+          <span class="tag">Belleza y cuidado personal</span>
+          <h3>SEYTÚ</h3>
+          <p>Descubrí productos para tu rutina facial, maquillaje y cuidado personal.</p>
+          <a class="btn"
+             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20los%20productos%20SEYT%C3%9A"
+             target="_blank" rel="noopener">Descubrir SEYTÚ ↗</a>
+          <a class="btn btn-outline"
+             href="https://guia-seytu.omnilife.com/argentina"
+             target="_blank" rel="noopener">Ver catálogo ↗</a>
+        </article>
+
+        <article class="card emprender reveal" id="emprender">
+          <div class="visual" aria-hidden="true"><span>🚀</span></div>
+          <span class="tag">Tu proyecto digital</span>
+          <h3>Emprendimiento</h3>
+          <p>Conocé cómo funciona la venta directa y cómo compartir tu proyecto desde el celular.</p>
+          <a class="btn"
+             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20emprender%20con%20VISIONARY"
+             target="_blank" rel="noopener">Quiero emprender ↗</a>
+          <a class="btn btn-outline"
+             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20funciona%20la%20venta%20directa%20y%20digital"
+             target="_blank" rel="noopener">Cómo funciona ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap about reveal">
+      <div class="hero-gem" aria-hidden="true">💎</div>
+      <h2>Una idea puede abrir nuevas puertas</h2>
+      <p>
+        Escribinos para conocer las opciones, resolver tus dudas y recibir
+        información sin compromiso sobre productos, belleza y emprendimiento.
+      </p>
+      <div class="actions">
+        <a class="btn"
+           href="https://wa.me/5492995399926?text=Hola%2C%20llegu%C3%A9%20desde%20la%20p%C3%A1gina%20VISIONARY"
+           target="_blank" rel="noopener">Hablar con VISIONARY 💬</a>
+        <button class="btn btn-outline" type="button" id="shareBtn">Compartir página ↗</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand-name" style="font-size:22px;font-weight:900">VISIONARY 💎</div>
+      <p>Bienestar · Belleza · Emprendimiento</p>
+      <p>Consultá las indicaciones oficiales de cada producto.</p>
+      <p>© <span id="year"></span> VISIONARY</p>
+    </div>
+  </footer>
+
+  <a class="floating-wa"
+     href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20consultar%20por%20VISIONARY"
+     target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">✆</a>
+
+  <script>
+    // Animación de tarjetas al desplazarse por la página.
+    const items = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      items.forEach(item => observer.observe(item));
+    } else {
+      items.forEach(item => item.classList.add('visible'));
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Compartir usando las opciones disponibles en el celular.
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const data = {
+        title: 'VISIONARY 💎 | Tu próximo paso comienza acá',
+        text: 'Descubrí OMNILIFE, SEYTÚ y una oportunidad para emprender.',
+        url: window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(data);
+        } else if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(window.location.href);
+          alert('¡Enlace copiado! Ya podés compartirlo.');
+        } else {
+          window.prompt('Copiá este enlace para compartir:', window.location.href);
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          window.prompt('Copiá este enlace para compartir:', window.location.href);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
