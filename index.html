@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#063c2b">
-  <meta name="description" content="Descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender con VISIONARY. Consultanos por WhatsApp.">
+  <meta name="theme-color" content="#061b35">
+  <meta name="description" content="VISIONARY: descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VISIONARY | Bienestar, belleza y futuro">
-  <meta property="og:description" content="Conocé OMNILIFE y SEYTÚ. Elegí tu próximo paso y contactanos por WhatsApp.">
+  <meta property="og:title" content="VISIONARY 💎 Tu próximo paso comienza acá">
+  <meta property="og:description" content="Bienestar, belleza y nuevas oportunidades. Conocé OMNILIFE y SEYTÚ.">
   <meta property="og:image" content="visionary-redes.png">
 
-  <title>VISIONARY | Tu próximo paso comienza acá</title>
+  <title>VISIONARY 💎 | Bienestar, belleza y futuro</title>
 
   <style>
     :root {
-      --verde: #063c2b;
-      --verde2: #0b6240;
-      --dorado: #e7c46b;
-      --crema: #fff8e9;
-      --texto: #fdf9ef;
+      --azul: #061b35;
+      --azul2: #0d3150;
+      --verde: #07563e;
+      --verde2: #0a7950;
+      --oro: #f5d477;
+      --oro2: #c79532;
+      --crema: #fff9eb;
+      --texto: #f8f5eb;
     }
 
     * {
@@ -33,11 +36,12 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       color: var(--texto);
+      font-family: "Trebuchet MS", Arial, sans-serif;
       background:
-        radial-gradient(ellipse at top, #176345 0%, transparent 48%),
-        linear-gradient(145deg, #021d16, #075036 55%, #031c14);
+        radial-gradient(ellipse at 50% 0%, #175b50 0%, transparent 40%),
+        radial-gradient(ellipse at 0% 55%, #123f5a 0%, transparent 40%),
+        linear-gradient(145deg, #020d1c, #062b30 52%, #031426);
     }
 
     a {
@@ -50,196 +54,244 @@
     }
 
     header {
-      padding: 24px 0 12px;
       text-align: center;
+      padding: 28px 0 10px;
+    }
+
+    .diamante {
+      display: inline-block;
+      color: var(--oro);
+      font-size: 40px;
+      text-shadow: 0 0 22px rgba(245,212,119,.7);
+      animation: brillo 3s ease-in-out infinite;
     }
 
     .logo {
-      color: var(--dorado);
-      font-family: Georgia, serif;
-      font-size: clamp(36px, 7vw, 66px);
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--oro);
+      font-size: clamp(39px, 8vw, 76px);
       letter-spacing: 5px;
-      margin: 0;
       font-weight: normal;
+      margin: 5px 0;
+      text-shadow: 0 4px 30px rgba(245,212,119,.23);
     }
 
     .sublogo {
-      margin: 9px 0 0;
-      color: var(--crema);
       letter-spacing: 3px;
-      font-size: 12px;
+      font-size: 11px;
+      color: #f8e7b1;
+      margin-top: 12px;
     }
 
     .hero {
       text-align: center;
-      padding: 36px 0 42px;
+      padding: 45px 0 48px;
     }
 
     .etiqueta {
       display: inline-block;
-      border: 1px solid #dcb95d;
-      color: var(--dorado);
-      padding: 8px 16px;
+      color: var(--oro);
+      border: 1px solid var(--oro2);
       border-radius: 50px;
-      font-size: 12px;
+      padding: 10px 19px;
+      font-size: 11px;
       letter-spacing: 2px;
+      background: rgba(245,212,119,.07);
     }
 
     h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(30px, 5vw, 54px);
-      line-height: 1.15;
-      margin: 22px auto 14px;
-      max-width: 800px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(35px, 6vw, 61px);
+      line-height: 1.12;
+      margin: 24px auto 18px;
     }
 
     h1 span {
-      color: var(--dorado);
+      display: inline-block;
+      color: var(--oro);
+      text-shadow: 0 0 25px rgba(245,212,119,.17);
     }
 
     .intro {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.8;
-      color: #e5ecdf;
+      max-width: 700px;
+      margin: auto;
+      color: #e1ece7;
       font-size: 16px;
+      line-height: 1.9;
     }
 
-    .firma {
-      margin-top: 22px;
-      color: var(--dorado);
+    .frase {
+      color: var(--oro);
       font-family: Georgia, serif;
       font-style: italic;
-      font-size: 25px;
+      font-size: clamp(22px, 4vw, 30px);
+      margin-top: 25px;
     }
 
     .secciones {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      padding: 10px 0 45px;
+      gap: 22px;
+      padding: 10px 0 55px;
     }
 
     .tarjeta {
-      border: 1px solid rgba(231,196,107,.75);
-      border-radius: 22px;
-      padding: 28px 20px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(245,212,119,.8);
+      border-radius: 24px;
+      padding: 30px 20px;
       text-align: center;
-      background: linear-gradient(160deg, rgba(18,91,59,.96), rgba(2,35,25,.98));
-      box-shadow: 0 12px 35px rgba(0,0,0,.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: linear-gradient(155deg, #106447, #042c25 78%);
+      box-shadow: 0 15px 35px rgba(0,0,0,.3),
+                  inset 0 0 22px rgba(245,212,119,.04);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .tarjeta::before {
+      content: "✧";
+      position: absolute;
+      top: -13px;
+      right: 12px;
+      font-size: 80px;
+      color: rgba(245,212,119,.11);
+      pointer-events: none;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 42px rgba(0,0,0,.38);
     }
 
     .tarjeta.belleza {
-      background: linear-gradient(160deg, #743e4a, #321d28);
-      border-color: #e9b2bd;
+      background: linear-gradient(155deg, #854a60, #321c36 80%);
+      border-color: #efbdc8;
     }
 
     .tarjeta.emprender {
-      background: linear-gradient(160deg, #66501e, #29200c);
+      background: linear-gradient(155deg, #806326, #30250c 80%);
     }
 
     .icono {
-      width: 65px;
-      height: 65px;
-      border: 2px solid var(--dorado);
-      color: var(--dorado);
-      border-radius: 50%;
+      width: 75px;
+      height: 75px;
       display: grid;
       place-items: center;
-      font-size: 29px;
-      margin-bottom: 15px;
+      margin: 0 auto 17px;
+      border: 2px solid var(--oro);
+      border-radius: 50%;
+      color: var(--oro);
+      font-size: 35px;
+      background: rgba(0,0,0,.14);
+      box-shadow: 0 0 22px rgba(245,212,119,.12);
     }
 
     .tarjeta h2 {
-      font-size: 23px;
-      margin: 5px 0 12px;
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin: 8px 0 14px;
     }
 
     .tarjeta p {
-      color: #f1eadd;
-      line-height: 1.7;
+      min-height: 85px;
+      color: #f5eee3;
       font-size: 14px;
-      min-height: 72px;
+      line-height: 1.8;
       margin: 0 0 22px;
     }
 
     .boton {
-      display: inline-block;
-      background: linear-gradient(135deg, #f5dc91, #d5a83e);
-      color: #182416;
-      border-radius: 50px;
-      padding: 15px 17px;
+      display: block;
       width: 100%;
-      max-width: 280px;
-      font-weight: bold;
+      max-width: 290px;
+      margin: auto;
+      padding: 16px 13px;
+      border-radius: 50px;
+      background: linear-gradient(115deg, #fff0ad, #e9bd50 50%, #c28c25);
+      color: #14251d;
       font-size: 14px;
-      box-shadow: 0 5px 18px rgba(0,0,0,.18);
+      font-weight: 800;
+      box-shadow: 0 6px 22px rgba(232,190,78,.23);
       transition: transform .2s, filter .2s;
     }
 
     .boton:hover {
-      transform: translateY(-3px);
-      filter: brightness(1.08);
+      transform: scale(1.035);
+      filter: brightness(1.09);
     }
 
     .detalle {
-      color: #f0d78f;
-      font-size: 12px;
-      margin-top: 20px;
+      color: #f5d88d;
+      font-size: 11px;
+      letter-spacing: .5px;
+      line-height: 1.9;
+      margin-top: 22px;
+    }
+
+    .contacto {
+      margin: 0 auto 35px;
+      padding: 35px 22px;
+      text-align: center;
+      border: 1px solid rgba(245,212,119,.55);
+      border-radius: 25px;
+      background: linear-gradient(120deg, rgba(9,57,54,.8), rgba(6,27,53,.92));
+      box-shadow: 0 12px 35px rgba(0,0,0,.22);
+    }
+
+    .contacto h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: var(--oro);
+      margin: 10px 0;
+    }
+
+    .contacto p {
+      color: #e6e9e0;
       line-height: 1.8;
     }
 
-    .bloque-contacto {
-      text-align: center;
-      border-top: 1px solid rgba(231,196,107,.4);
-      padding: 30px 0 35px;
-    }
-
-    .bloque-contacto h2 {
-      color: var(--dorado);
-      font-family: Georgia, serif;
-      font-size: 28px;
-    }
-
     .numero {
-      font-size: clamp(23px, 4vw, 36px);
+      color: var(--oro) !important;
+      font-size: clamp(26px, 5vw, 39px);
       font-weight: bold;
-      letter-spacing: 1px;
-      margin: 16px 0;
+      letter-spacing: 2px;
+      margin: 20px 0;
     }
 
     .marcas {
-      color: var(--dorado);
+      color: var(--oro);
       letter-spacing: 2px;
-      margin: 25px 0 0;
-      font-size: 14px;
+      margin-top: 30px;
+      font-size: 13px;
     }
 
     footer {
       text-align: center;
-      padding: 20px 10px;
-      color: #d6dfd5;
-      background: rgba(0,0,0,.18);
+      padding: 25px 12px;
+      color: #cbd8d2;
+      background: rgba(0,0,0,.2);
       font-size: 12px;
-      line-height: 1.8;
+      line-height: 1.9;
+    }
+
+    @keyframes brillo {
+      0%, 100% { transform: scale(1); opacity: .85; }
+      50% { transform: scale(1.09); opacity: 1; }
     }
 
     @media (max-width: 760px) {
       .secciones {
         grid-template-columns: 1fr;
-        max-width: 480px;
+        max-width: 470px;
         margin: auto;
       }
 
       .tarjeta p {
-        min-height: auto;
+        min-height: 0;
       }
 
       .hero {
-        padding-top: 25px;
+        padding-top: 32px;
       }
 
       .logo {
@@ -248,12 +300,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .boton {
-        transition: none;
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -261,13 +311,14 @@
 
 <body>
   <header class="contenedor">
-    <p class="logo">✧ VISIONARY ✧</p>
+    <div class="diamante" aria-label="Diamante">◆</div>
+    <h2 class="logo">VISIONARY</h2>
     <p class="sublogo">TU BIENESTAR · TU BELLEZA · TU FUTURO</p>
   </header>
 
   <main>
     <section class="hero contenedor">
-      <span class="etiqueta">BIENVENIDO A VISIONARY</span>
+      <span class="etiqueta">✦ DESCUBRÍ TU PRÓXIMO CAPÍTULO ✦</span>
 
       <h1>
         Tu próximo paso<br>
@@ -275,12 +326,12 @@
       </h1>
 
       <p class="intro">
-        Conocé OMNILIFE y SEYTÚ, descubrí opciones para tu
-        bienestar y belleza, o animate a comenzar tu propio
-        camino como emprendedor.
+        Mucho más que productos: descubrí opciones para tu bienestar,
+        tu cuidado personal y tu desarrollo como emprendedor.
+        Elegí tu camino y conocé VISIONARY.
       </p>
 
-      <div class="firma">Elegí lo que te inspira.</div>
+      <div class="frase">Tu visión puede convertirse en tu futuro. 💎</div>
     </section>
 
     <section class="secciones contenedor">
@@ -289,82 +340,73 @@
         <div class="icono" aria-hidden="true">✿</div>
         <h2>Nutrición OMNILIFE</h2>
         <p>
-          Explorá productos de nutrición, energía e hidratación.
-          Consultá opciones y precios según tus intereses.
+          Explorá opciones de nutrición, energía e hidratación.
+          Consultá por productos, presentaciones y precios.
         </p>
-
         <a class="boton"
            href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20los%20productos%20de%20nutrici%C3%B3n%20OMNILIFE%20y%20sus%20precios."
            target="_blank" rel="noopener">
-          Consultar por WhatsApp →
+          CONOCER PRODUCTOS →
         </a>
-
-        <div class="detalle">
-          NUTRICIÓN DIARIA · ENERGÍA · HIDRATACIÓN
-        </div>
+        <div class="detalle">✧ NUTRICIÓN · ENERGÍA · HIDRATACIÓN ✧</div>
       </article>
 
       <article class="tarjeta belleza">
         <div class="icono" aria-hidden="true">✧</div>
         <h2>Belleza SEYTÚ</h2>
         <p>
-          Descubrí cosmética, cuidado facial y rutinas de belleza
-          para encontrar los productos adecuados para vos.
+          Conocé cosmética, cuidado facial y rutinas de belleza
+          para descubrir qué opciones se adaptan a vos.
         </p>
-
         <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20los%20productos%20de%20belleza%20SEYT%C3%9A%20y%20sus%20precios."
+           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20belleza%20SEYT%C3%9A."
            target="_blank" rel="noopener">
-          Consultar por WhatsApp →
+          DESCUBRIR SEYTÚ →
         </a>
-
-        <div class="detalle">
-          CUIDADO FACIAL · COSMÉTICA · BELLEZA
-        </div>
+        <div class="detalle">✧ CUIDADO FACIAL · COSMÉTICA ✧</div>
       </article>
 
       <article class="tarjeta emprender">
-        <div class="icono" aria-hidden="true">↗</div>
+        <div class="icono" aria-hidden="true">◆</div>
         <h2>Emprendé con nosotros</h2>
         <p>
-          Conocé cómo funciona la oportunidad comercial,
-          la venta directa y las herramientas digitales.
+          Conocé cómo funciona la venta directa y las herramientas
+          digitales para desarrollar tu propia actividad comercial.
         </p>
-
         <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20emprender%20con%20VISIONARY%2C%20OMNILIFE%20y%20SEYT%C3%9A."
+           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20la%20oportunidad%20de%20emprender%20con%20VISIONARY."
            target="_blank" rel="noopener">
-          Quiero emprender →
+          QUIERO EMPRENDER →
         </a>
-
-        <div class="detalle">
-          VENTA DIRECTA · DIGITAL · ACOMPAÑAMIENTO
-        </div>
+        <div class="detalle">✧ VENTA DIRECTA · DIGITAL · EQUIPO ✧</div>
       </article>
 
     </section>
 
-    <section class="bloque-contacto">
-      <div class="contenedor">
-        <h2>¿Hablamos?</h2>
-        <p>Escribinos y te ayudamos a encontrar la opción que buscás.</p>
+    <section class="contenedor contacto">
+      <div class="diamante">◆</div>
+      <h2>¿Lo descubrimos juntos?</h2>
+      <p>
+        Escribinos y contanos qué te interesa.<br>
+        Estamos para orientarte.
+      </p>
+      <p class="numero">299 505 3620</p>
 
-        <p class="numero">299 539 9926</p>
+      <a class="boton"
+         href="https://wa.me/5492995053620?text=Hola%2C%20llegu%C3%A9%20a%20VISIONARY%20y%20quiero%20recibir%20informaci%C3%B3n."
+         target="_blank" rel="noopener">
+        <span aria-hidden="true">●</span> HABLAR POR WHATSAPP
+      </a>
 
-        <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20llegu%C3%A9%20a%20la%20p%C3%A1gina%20VISIONARY%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n."
-           target="_blank" rel="noopener">
-          <span aria-hidden="true">●</span> HABLAR POR WHATSAPP
-        </a>
-
-        <p class="marcas">OMNILIFE &nbsp; ✧ &nbsp; SEYTÚ &nbsp; ✧ &nbsp; VISIONARY</p>
-      </div>
+      <div class="marcas">◆ VISIONARY ◆ OMNILIFE ◆ SEYTÚ ◆</div>
     </section>
   </main>
 
   <footer>
+    <div class="diamante">◆</div>
+    <br>
     VISIONARY · Bienestar, belleza y emprendimiento.<br>
-    Los productos y la oportunidad comercial están sujetos a sus condiciones correspondientes.
+    Consultá las condiciones de cada producto y de la oportunidad comercial.
   </footer>
 </body>
 </html>
