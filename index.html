@@ -2,266 +2,89 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#061b35">
-  <meta name="description" content="VISIONARY: descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="VISIONARY 💎 Tu próximo paso comienza acá">
-  <meta property="og:description" content="Bienestar, belleza y nuevas oportunidades. Conocé OMNILIFE y SEYTÚ.">
-  <meta property="og:image" content="visionary-redes.png">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#040d1a">
+  
+  <!-- SEO & Social Media Meta Tags (Portada para WhatsApp, Facebook e Instagram) -->
   <title>VISIONARY 💎 | Bienestar, belleza y futuro</title>
+  <meta name="title" content="VISIONARY 💎 | Bienestar, belleza y futuro">
+  <meta name="description" content="Descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad única para emprender con VISIONARY. Escribinos directamente por WhatsApp.">
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://visionary.com.ar/">
+  <meta property="og:title" content="VISIONARY 💎 | Tu próximo paso comienza acá">
+  <meta property="og:description" content="Nutrición OMNILIFE, Cosmética SEYTÚ y Oportunidad de Emprendimiento. Sumate al equipo VISIONARY.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VISIONARY 💎 | Bienestar, belleza y emprendimiento">
+  <meta name="twitter:description" content="Nutrición OMNILIFE, Cosmética SEYTÚ y Oportunidad de Emprendimiento.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#040d1a',
+            brandBlue: '#091c36',
+            brandGold: '#f5d477',
+            brandGoldDark: '#c79532',
+            omniGreen: '#0db37b',
+            seytuRose: '#ff528c',
+          },
+          fontFamily: {
+            serif: ['Georgia', 'serif'],
+            sans: ['Trebuchet MS', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
-    :root {
-      --azul: #061b35;
-      --azul-glow: #103868;
-      --verde-omni: #0db37b;
-      --rosa-seytu: #ff528c;
-      --oro-emprender: #ffca40;
-      --oro-light: #fff2b3;
-      --oro-dark: #b8860b;
-      --texto: #f8f5eb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* Estilos personalizados y animaciones avanzadas */
     body {
-      margin: 0;
-      color: var(--texto);
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      background: #020b16;
+      background-color: #040d1a;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(13, 179, 123, 0.25) 0%, transparent 45%),
-        radial-gradient(circle at 15% 50%, rgba(255, 82, 140, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 85% 75%, rgba(255, 202, 64, 0.15) 0%, transparent 40%);
+        radial-gradient(ellipse at 50% 0%, rgba(13, 179, 123, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 10% 40%, rgba(255, 82, 140, 0.15) 0%, transparent 45%),
+        radial-gradient(ellipse at 90% 70%, rgba(245, 212, 119, 0.18) 0%, transparent 50%);
       background-attachment: fixed;
-      overflow-x: hidden;
+      color: #f8f5eb;
+      font-family: 'Trebuchet MS', Arial, sans-serif;
     }
 
-    a {
-      text-decoration: none;
+    /* Brillo y animación de diamante */
+    .diamond-sparkle {
+      filter: drop-shadow(0 0 18px rgba(245, 212, 119, 0.75));
+      animation: pulseSparkle 3s ease-in-out infinite;
     }
 
-    .contenedor {
-      width: min(1120px, 92%);
-      margin: auto;
+    @keyframes pulseSparkle {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 15px rgba(245, 212, 119, 0.6));
+      }
+      50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 28px rgba(245, 212, 119, 0.95));
+      }
     }
 
-    /* HEADER & PORTADA */
-    header {
-      text-align: center;
-      padding: 40px 0 10px;
-    }
-
-    .logo-contenedor {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 10px 0;
-    }
-
-    .diamante-header {
-      color: var(--oro-emprender);
-      font-size: clamp(32px, 6vw, 55px);
-      filter: drop-shadow(0 0 15px rgba(255, 202, 64, 0.8));
-      animation: pulsoBrillo 2.5s ease-in-out infinite;
-    }
-
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 50%, #e1b12c 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: clamp(42px, 9vw, 82px);
-      letter-spacing: 6px;
-      font-weight: 800;
-      margin: 0;
-      text-shadow: 0 0 35px rgba(245, 212, 119, 0.3);
-    }
-
-    .sublogo {
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #f8e7b1;
-      margin-top: 10px;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 35px 0 40px;
-    }
-
-    .etiqueta {
-      display: inline-block;
-      color: var(--oro-light);
-      border: 1px solid var(--oro-emprender);
-      border-radius: 50px;
-      padding: 10px 22px;
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      background: rgba(255, 202, 64, 0.1);
-      box-shadow: 0 0 15px rgba(255, 202, 64, 0.15);
-      backdrop-filter: blur(5px);
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 6vw, 62px);
-      line-height: 1.15;
-      margin: 24px auto 18px;
-    }
-
-    h1 span {
-      background: linear-gradient(90deg, #ffca40, #fff2b3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 25px rgba(255, 202, 64, 0.3);
-    }
-
-    .intro {
-      max-width: 680px;
-      margin: auto;
-      color: #e1ece7;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .frase {
-      color: var(--oro-light);
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: clamp(20px, 3.5vw, 28px);
-      margin-top: 25px;
-      text-shadow: 0 0 10px rgba(255, 242, 179, 0.2);
-    }
-
-    /* SECCIONES Y TARJETAS */
-    .secciones {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-      padding: 20px 0 60px;
-    }
-
-    .tarjeta {
+    /* Efecto destello deslumbrante en los botones */
+    .btn-shine {
       position: relative;
       overflow: hidden;
-      border-radius: 24px;
-      padding: 25px 20px 30px;
-      text-align: center;
-      background: rgba(13, 31, 53, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
-
-    .tarjeta:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-
-    /* Tarjeta OMNILIFE */
-    .tarjeta.omnilife {
-      border-color: rgba(13, 179, 123, 0.5);
-    }
-    .tarjeta.omnilife:hover {
-      border-color: var(--verde-omni);
-      box-shadow: 0 10px 30px rgba(13, 179, 123, 0.3);
-    }
-
-    /* Tarjeta SEYTU */
-    .tarjeta.seytu {
-      border-color: rgba(255, 82, 140, 0.5);
-    }
-    .tarjeta.seytu:hover {
-      border-color: var(--rosa-seytu);
-      box-shadow: 0 10px 30px rgba(255, 82, 140, 0.3);
-    }
-
-    /* Tarjeta EMPRENDER */
-    .tarjeta.emprender {
-      border-color: rgba(255, 202, 64, 0.5);
-    }
-    .tarjeta.emprender:hover {
-      border-color: var(--oro-emprender);
-      box-shadow: 0 10px 30px rgba(255, 202, 64, 0.3);
-    }
-
-    /* IMÁGENES ILUSTRATIVAS EN TARJETAS */
-    .imagen-tarjeta {
-      width: 100%;
-      height: 180px;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .imagen-tarjeta img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .tarjeta:hover .imagen-tarjeta img {
-      transform: scale(1.08);
-    }
-
-    .tarjeta h2 {
-      font-family: Georgia, serif;
-      font-size: 26px;
-      margin: 10px 0 12px;
-      color: #fff;
-    }
-
-    .tarjeta p {
-      color: #d1deda;
-      font-size: 14.5px;
-      line-height: 1.7;
-      margin: 0 0 25px;
-      flex-grow: 1;
-    }
-
-    /* BOTONES INTERACTIVOS CON EFECTO DE LUZ */
-    .boton {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      padding: 16px 20px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #051322;
-      background: linear-gradient(90deg, #ffd700, #ffae00);
-      box-shadow: 0 5px 20px rgba(255, 174, 0, 0.3);
-      overflow: hidden;
-      transition: all 0.3s ease;
-      z-index: 1;
-    }
-
-    /* Destello deslizante en los botones */
-    .boton::after {
+    .btn-shine::after {
       content: '';
       position: absolute;
       top: -50%;
@@ -271,239 +94,321 @@
       background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.75) 50%,
         rgba(255, 255, 255, 0) 100%
       );
-      transform: rotate(30deg);
-      animation: destelloBoton 3.5s infinite;
+      transform: rotate(25deg);
+      animation: shineEffect 3.5s infinite;
     }
 
-    .boton:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 25px rgba(255, 202, 64, 0.5);
-    }
-
-    .omnilife .boton {
-      background: linear-gradient(90deg, #10ac84, #1dd1a1);
-      color: #012418;
-      box-shadow: 0 5px 20px rgba(29, 209, 161, 0.3);
-    }
-    .omnilife .boton:hover {
-      box-shadow: 0 8px 25px rgba(29, 209, 161, 0.5);
-    }
-
-    .seytu .boton {
-      background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
-      color: #2b040e;
-      box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
-    }
-    .seytu .boton:hover {
-      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
-    }
-
-    .detalle {
-      color: var(--oro-light);
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-top: 18px;
-      opacity: 0.8;
-    }
-
-    /* CONTACTO */
-    .contacto {
-      margin: 10px auto 40px;
-      padding: 45px 25px;
-      text-align: center;
-      border: 1px solid rgba(255, 202, 64, 0.4);
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(13, 31, 53, 0.9), rgba(5, 18, 34, 0.95));
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-    }
-
-    .contacto h2 {
-      font-family: Georgia, serif;
-      font-size: 34px;
-      color: var(--oro-light);
-      margin: 10px 0;
-    }
-
-    .contacto p {
-      color: #e6e9e0;
-      line-height: 1.8;
-      font-size: 16px;
-    }
-
-    .numero {
-      color: var(--oro-emprender) !important;
-      font-size: clamp(30px, 6vw, 44px);
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin: 20px 0;
-      text-shadow: 0 0 15px rgba(255, 202, 64, 0.3);
-    }
-
-    .marcas {
-      color: var(--oro-emprender);
-      letter-spacing: 3px;
-      margin-top: 30px;
-      font-size: 12px;
-      font-weight: bold;
-      opacity: 0.8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: #a4b0be;
-      background: rgba(0,0,0,0.4);
-      font-size: 13px;
-      line-height: 1.8;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    /* ANIMACIONES */
-    @keyframes pulsoBrillo {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 12px rgba(255, 202, 64, 0.7)); }
-      50% { transform: scale(1.12); filter: drop-shadow(0 0 22px rgba(255, 202, 64, 1)); }
-    }
-
-    @keyframes destelloBoton {
+    @keyframes shineEffect {
       0% { left: -60%; }
       20% { left: 140%; }
       100% { left: 140%; }
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 880px) {
-      .secciones {
-        grid-template-columns: 1fr;
-        max-width: 450px;
-        margin: auto;
-      }
-
-      .hero {
-        padding-top: 20px;
-      }
+    /* Tarjetas con efecto Glow de borde */
+    .card-glow-omni:hover {
+      border-color: #0db37b;
+      box-shadow: 0 0 30px rgba(13, 179, 123, 0.35);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
+    .card-glow-seytu:hover {
+      border-color: #ff528c;
+      box-shadow: 0 0 30px rgba(255, 82, 140, 0.35);
+    }
+
+    .card-glow-gold:hover {
+      border-color: #f5d477;
+      box-shadow: 0 0 30px rgba(245, 212, 119, 0.35);
+    }
+
+    /* Fuente para el Logo */
+    .brand-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f5d477 50%, #c79532 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.2em;
     }
   </style>
 </head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brandGold selection:text-brandDark">
 
-<body>
-  <header class="contenedor">
-    <div class="logo-contenedor">
-      <span class="diamante-header" aria-hidden="true">◆</span>
-      <h2 class="logo">VISIONARY</h2>
+  <!-- ================= HEADER / CABECERA ================= -->
+  <header class="pt-8 pb-4 text-center px-4">
+    <div class="max-w-4xl mx-auto flex flex-col items-center justify-center">
+      
+      <!-- Logo Diamante Geométrico SVG (Calcado del diseño) -->
+      <div class="diamond-sparkle mb-2 cursor-pointer transition-transform hover:scale-105">
+        <svg width="100" height="70" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+          <!-- Destello superior derecho -->
+          <circle cx="150" cy="22" r="6" fill="#FFFFFF" />
+          <path d="M150 10 L150 34 M138 22 L162 22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Estructura del Diamante -->
+          <!-- Borde Exterior -->
+          <polygon points="100,125 25,50 60,15 140,15 175,50" stroke="url(#goldGradient)" stroke-width="4.5" fill="none" stroke-linejoin="round" />
+          
+          <!-- Líneas Interiores Superior -->
+          <line x1="60" y1="15" x2="25" y2="50" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="140" y1="15" x2="175" y2="50" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="60" y1="15" x2="75" y2="50" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="140" y1="15" x2="125" y2="50" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="100" y1="15" x2="100" y2="50" stroke="url(#goldGradient)" stroke-width="3" />
+
+          <!-- Línea Horizontal Media -->
+          <line x1="25" y1="50" x2="175" y2="50" stroke="url(#goldGradient)" stroke-width="3.5" />
+
+          <!-- Facetas Inferiores apuntando al vértice -->
+          <line x1="25" y1="50" x2="100" y2="125" stroke="url(#goldGradient)" stroke-width="3.5" />
+          <line x1="75" y1="50" x2="100" y2="125" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="100" y1="50" x2="100" y2="125" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="125" y1="50" x2="100" y2="125" stroke="url(#goldGradient)" stroke-width="3" />
+          <line x1="175" y1="50" x2="100" y2="125" stroke="url(#goldGradient)" stroke-width="3.5" />
+
+          <!-- Def de Gradiente Dorado -->
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff0ad" />
+              <stop offset="50%" stop-color="#f5d477" />
+              <stop offset="100%" stop-color="#c79532" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Nombre VISIONARY -->
+      <h1 class="brand-title text-4xl sm:text-6xl md:text-7xl font-normal tracking-widest my-1 uppercase drop-shadow-lg">
+        VISIONARY
+      </h1>
+      <p class="text-xs sm:text-sm tracking-[0.3em] text-brandGold/90 font-semibold uppercase mt-1">
+        TU BIENESTAR · TU BELLEZA · TU FUTURO
+      </p>
     </div>
-    <p class="sublogo">TU BIENESTAR · TU BELLEZA · TU FUTURO</p>
   </header>
 
-  <main>
-    <section class="hero contenedor">
-      <span class="etiqueta">✦ DESCUBRÍ TU PRÓXIMO CAPÍTULO ✦</span>
+  <!-- ================= HERO SECTION ================= -->
+  <main class="flex-grow">
+    <section class="max-w-4xl mx-auto text-center px-4 pt-6 pb-10">
+      
+      <!-- Icono central de Diamante en reemplazo del tag anterior -->
+      <div class="inline-flex items-center justify-center p-3 rounded-full bg-brandGold/10 border border-brandGold/40 text-brandGold mb-6 shadow-[0_0_15px_rgba(245,212,119,0.2)]">
+        <svg class="w-6 h-6 text-brandGold" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L2 9l10 13 10-13-10-11zm0 3.8L17.8 9 12 16.5 6.2 9 12 5.8z"/>
+        </svg>
+      </div>
 
-      <h1>
+      <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl text-white leading-tight mb-4">
         Tu próximo paso<br>
-        <span>comienza acá.</span>
-      </h1>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGold via-amber-200 to-brandGoldDark drop-shadow">
+          comienza acá.
+        </span>
+      </h2>
 
-      <p class="intro">
-        Mucho más que productos: descubrí opciones para tu bienestar,
-        tu cuidado personal y tu desarrollo como emprendedor.
-        Elegí tu camino y conocé VISIONARY.
+      <p class="max-w-2xl mx-auto text-gray-200 text-base sm:text-lg leading-relaxed mb-6 font-light">
+        Mucho más que productos: descubrí opciones exclusivas para tu bienestar,
+        tu cuidado personal y tu desarrollo como emprendedor independiente.
+        Elegí tu camino y transformá tu estilo de vida.
       </p>
 
-      <div class="frase">Tu visión puede convertirse en tu futuro. 💎</div>
+      <div class="font-serif italic text-xl sm:text-2xl text-brandGold tracking-wide">
+        "Tu visión puede convertirse en tu futuro." 💎
+      </div>
     </section>
 
-    <section class="secciones contenedor">
+    <!-- ================= SECCIÓN DE TARJETAS ================= -->
+    <section class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <!-- TARJETA OMNILIFE -->
-      <article class="tarjeta omnilife">
-        <div class="imagen-tarjeta">
-          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Nutrición y Bienestar Omnilife">
+      <!-- TARJETA 1: OMNILIFE -->
+      <article class="card-glow-omni bg-brandBlue/70 border border-omniGreen/30 rounded-3xl p-6 text-center backdrop-blur-md transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-omniGreen/10 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div>
+          <!-- Imagen Ilustrativa -->
+          <div class="w-full h-44 rounded-2xl overflow-hidden mb-5 relative shadow-inner">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
+                 alt="Nutrición Omnilife" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 onerror="this.src='https://placehold.co/600x400/0b3b2d/ffffff?text=Nutricion+Omnilife'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-omniGreen/90 text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Salud & Vitalidad
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-white font-normal mb-3">Nutrición OMNILIFE</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Explorá suplementos de nutrición micelizada, energía constante e hidratación avanzada. Consultá por disponibilidad, combos y precios.
+          </p>
         </div>
-        <h2>Nutrición OMNILIFE</h2>
-        <p>
-          Explorá opciones de nutrición, energía e hidratación de alto rendimiento. Consultá por productos, presentaciones y precios.
-        </p>
-        <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20los%20productos%20de%20nutrici%C3%B3n%20OMNILIFE%20y%20sus%20precios."
-           target="_blank" rel="noopener">
-          CONOCER PRODUCTOS →
-        </a>
-        <div class="detalle">✧ NUTRICIÓN · ENERGÍA · HIDRATACIÓN ✧</div>
+
+        <div>
+          <a href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20los%20productos%20de%20nutrici%C3%B3n%20OMNILIFE%20y%20sus%20precios."
+             target="_blank" 
+             rel="noopener"
+             class="btn-shine block w-full py-4 px-4 rounded-full bg-gradient-to-r from-emerald-500 via-omniGreen to-teal-400 text-slate-950 font-extrabold text-sm tracking-wider uppercase shadow-lg shadow-omniGreen/20 hover:shadow-omniGreen/40 transition-transform active:scale-95">
+            CONOCER PRODUCTOS →
+          </a>
+          <div class="text-[11px] text-emerald-300/80 tracking-widest uppercase mt-4 font-semibold">
+            ✧ NUTRICIÓN · ENERGÍA · HIDRATACIÓN ✧
+          </div>
+        </div>
       </article>
 
-      <!-- TARJETA SEYTÚ -->
-      <article class="tarjeta seytu">
-        <div class="imagen-tarjeta">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Cosmética y Belleza Seytú">
+      <!-- TARJETA 2: SEYTÚ -->
+      <article class="card-glow-seytu bg-brandBlue/70 border border-seytuRose/30 rounded-3xl p-6 text-center backdrop-blur-md transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-seytuRose/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div>
+          <!-- Imagen Ilustrativa -->
+          <div class="w-full h-44 rounded-2xl overflow-hidden mb-5 relative shadow-inner">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" 
+                 alt="Cosmética Seytú" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 onerror="this.src='https://placehold.co/600x400/4a1d28/ffffff?text=Belleza+Seytu'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-seytuRose/90 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Cosmética Hipoalergénica
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-white font-normal mb-3">Belleza SEYTÚ</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Conocé cosmética botánica, cuidado facial profesional y maquillaje a prueba de agua para potenciar tu belleza natural.
+          </p>
         </div>
-        <h2>Belleza SEYTÚ</h2>
-        <p>
-          Conocé cosmética botánica, cuidado facial avanzado y rutinas de belleza diseñadas para resaltar tu mejor versión.
-        </p>
-        <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20belleza%20SEYT%C3%9A."
-           target="_blank" rel="noopener">
-          DESCUBRIR SEYTÚ →
-        </a>
-        <div class="detalle">✧ CUIDADO FACIAL · COSMÉTICA ✧</div>
+
+        <div>
+          <a href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20belleza%20SEYT%C3%9A."
+             target="_blank" 
+             rel="noopener"
+             class="btn-shine block w-full py-4 px-4 rounded-full bg-gradient-to-r from-pink-500 via-seytuRose to-rose-400 text-slate-950 font-extrabold text-sm tracking-wider uppercase shadow-lg shadow-seytuRose/20 hover:shadow-seytuRose/40 transition-transform active:scale-95">
+            DESCUBRIR SEYTÚ →
+          </a>
+          <div class="text-[11px] text-pink-300/80 tracking-widest uppercase mt-4 font-semibold">
+            ✧ CUIDADO FACIAL · COSMÉTICA ✧
+          </div>
+        </div>
       </article>
 
-      <!-- TARJETA EMPRENDER -->
-      <article class="tarjeta emprender">
-        <div class="imagen-tarjeta">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Emprender con VISIONARY">
+      <!-- TARJETA 3: EMPRENDER -->
+      <article class="card-glow-gold bg-brandBlue/70 border border-brandGold/30 rounded-3xl p-6 text-center backdrop-blur-md transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-brandGold/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div>
+          <!-- Imagen Ilustrativa -->
+          <div class="w-full h-44 rounded-2xl overflow-hidden mb-5 relative shadow-inner">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
+                 alt="Emprender con VISIONARY" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 onerror="this.src='https://placehold.co/600x400/3d3011/ffffff?text=Emprende+Visionary'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-brandGold text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Oportunidad de Negocio
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-white font-normal mb-3">Emprendé con nosotros</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Sumate a nuestro equipo VISIONARY. Descubrí el modelo de negocio, herramientas digitales e ingresos independientes.
+          </p>
         </div>
-        <h2>Emprendé con nosotros</h2>
-        <p>
-          Sumate al equipo VISIONARY. Conocé cómo funciona la venta directa y las herramientas digitales para desarrollar tu negocio.
-        </p>
-        <a class="boton"
-           href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20la%20oportunidad%20de%20emprender%20con%20VISIONARY."
-           target="_blank" rel="noopener">
-          QUIERO EMPRENDER →
-        </a>
-        <div class="detalle">✧ VENTA DIRECTA · DIGITAL · EQUIPO ✧</div>
+
+        <div>
+          <a href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20la%20oportunidad%20de%20emprender%20con%20VISIONARY."
+             target="_blank" 
+             rel="noopener"
+             class="btn-shine block w-full py-4 px-4 rounded-full bg-gradient-to-r from-amber-200 via-brandGold to-brandGoldDark text-slate-950 font-extrabold text-sm tracking-wider uppercase shadow-lg shadow-brandGold/20 hover:shadow-brandGold/40 transition-transform active:scale-95">
+            QUIERO EMPRENDER →
+          </a>
+          <div class="text-[11px] text-brandGold/80 tracking-widest uppercase mt-4 font-semibold">
+            ✧ VENTA DIRECTA · DIGITAL · EQUIPO ✧
+          </div>
+        </div>
       </article>
 
     </section>
 
-    <!-- CONTACTO -->
-    <section class="contenedor contacto">
-      <div class="diamante-header" style="font-size: 32px;" aria-hidden="true">◆</div>
-      <h2>¿Lo descubrimos juntos?</h2>
-      <p>
-        Escribinos y contanos qué te interesa.<br>
-        Estamos para orientarte en tu próximo paso.
-      </p>
-      <p class="numero">299 505 3620</p>
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
+    <section class="max-w-3xl mx-auto px-4 my-10">
+      <div class="bg-gradient-to-b from-brandBlue/90 to-brandDark border border-brandGold/40 rounded-3xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden backdrop-blur-md">
+        
+        <!-- Adorno Diamante SVG -->
+        <div class="w-10 h-10 mx-auto text-brandGold mb-3">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 9l10 13 10-13-10-11zm0 3.8L17.8 9 12 16.5 6.2 9 12 5.8z"/>
+          </svg>
+        </div>
 
-      <a class="boton" style="max-width: 320px; margin: auto;"
-         href="https://wa.me/5492995053620?text=Hola%2C%20llegu%C3%A9%20a%20VISIONARY%20y%20quiero%20recibir%20informaci%C3%B3n."
-         target="_blank" rel="noopener">
-        HABLAR POR WHATSAPP
-      </a>
+        <h3 class="font-serif text-3xl sm:text-4xl text-brandGold mb-3">¿Lo descubrimos juntos?</h3>
+        <p class="text-gray-200 text-base leading-relaxed mb-2">
+          Escribinos directamente y contanos qué te interesa.<br>
+          Estamos listos para asesorarte de forma personalizada.
+        </p>
 
-      <div class="marcas">◆ VISIONARY ◆ OMNILIFE ◆ SEYTÚ ◆</div>
+        <!-- Teléfono Destacado -->
+        <div class="text-3xl sm:text-5xl font-extrabold text-brandGold tracking-wider my-6 drop-shadow-md">
+          299 505 3620
+        </div>
+
+        <a href="https://wa.me/5492995053620?text=Hola%2C%20llegu%C3%A9%20a%20VISIONARY%20y%20quiero%20recibir%20informaci%C3%B3n."
+           target="_blank" 
+           rel="noopener"
+           class="btn-shine inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-amber-300 via-brandGold to-brandGoldDark text-slate-950 font-black text-base tracking-wider uppercase shadow-xl hover:scale-105 transition-all">
+          <svg class="w-6 h-6 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>HABLAR POR WHATSAPP</span>
+        </a>
+
+        <div class="text-xs text-brandGold tracking-widest font-semibold mt-8">
+          ◆ VISIONARY ◆ OMNILIFE ◆ SEYTÚ ◆
+        </div>
+      </div>
     </section>
+
+    <!-- ================= HERRAMIENTA INTERACTIVA: VISTA PREVIA PORTADA DE REDES SOCIALES ================= -->
+    <section class="max-w-4xl mx-auto px-4 my-12">
+      <div class="bg-brandBlue/40 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+        <h4 class="text-brandGold font-serif text-lg text-center mb-2">
+          📸 Vista Previa de Portada (WhatsApp, Facebook e Instagram)
+        </h4>
+        <p class="text-xs text-gray-300 text-center mb-6">
+          Así se verá tu enlace cuando lo compartas en redes sociales o mensajes de chat:
+        </p>
+
+        <!-- Tarjeta Simulada Open Graph -->
+        <div class="max-w-md mx-auto bg-[#1e293b] rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+          <div class="relative h-48 bg-gradient-to-br from-brandDark via-brandBlue to-black p-4 flex flex-col justify-center items-center text-center">
+            <!-- Miniatura Diamante -->
+            <svg class="w-16 h-12 text-brandGold mb-1 diamond-sparkle" fill="none" viewBox="0 0 200 140">
+              <polygon points="100,125 25,50 60,15 140,15 175,50" stroke="#f5d477" stroke-width="6" fill="none" />
+              <line x1="25" y1="50" x2="175" y2="50" stroke="#f5d477" stroke-width="4" />
+              <line x1="100" y1="15" x2="100" y2="125" stroke="#f5d477" stroke-width="4" />
+            </svg>
+            <span class="brand-title text-2xl font-bold tracking-widest">VISIONARY</span>
+            <span class="text-[10px] text-brandGold tracking-widest uppercase">Bienestar · Belleza · Emprendimiento</span>
+          </div>
+          <div class="p-4 bg-slate-900">
+            <span class="text-[10px] text-gray-400 uppercase tracking-wider block mb-1">VISIONARY.COM.AR</span>
+            <h5 class="text-white text-sm font-bold">VISIONARY 💎 | Tu próximo paso comienza acá</h5>
+            <p class="text-xs text-gray-300 mt-1 line-clamp-2">
+              Descubrí nutrición OMNILIFE, cosmética SEYTÚ y la oportunidad para emprender tu propio negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="diamante-header" style="font-size: 20px;" aria-hidden="true">◆</div>
-    <br>
-    VISIONARY · Bienestar, belleza y emprendimiento.<br>
-    Consultá las condiciones de cada producto y de la oportunidad comercial.
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black/40 border-t border-white/5 text-center py-6 px-4 text-xs text-gray-400 leading-relaxed">
+    <div class="text-brandGold text-lg mb-2">◆</div>
+    <p class="font-medium text-gray-300">VISIONARY · Bienestar, belleza y emprendimiento.</p>
+    <p class="text-gray-500 mt-1">Consultá las condiciones de cada producto y de la oportunidad comercial.</p>
   </footer>
+
 </body>
 </html>
