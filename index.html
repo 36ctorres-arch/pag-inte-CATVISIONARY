@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,12 +16,12 @@
   <style>
     :root {
       --azul: #061b35;
-      --azul2: #0d3150;
-      --verde: #07563e;
-      --verde2: #0a7950;
-      --oro: #f5d477;
-      --oro2: #c79532;
-      --crema: #fff9eb;
+      --azul-glow: #103868;
+      --verde-omni: #0db37b;
+      --rosa-seytu: #ff528c;
+      --oro-emprender: #ffca40;
+      --oro-light: #fff2b3;
+      --oro-dark: #b8860b;
       --texto: #f8f5eb;
     }
 
@@ -38,10 +37,13 @@
       margin: 0;
       color: var(--texto);
       font-family: "Trebuchet MS", Arial, sans-serif;
-      background:
-        radial-gradient(ellipse at 50% 0%, #175b50 0%, transparent 40%),
-        radial-gradient(ellipse at 0% 55%, #123f5a 0%, transparent 40%),
-        linear-gradient(145deg, #020d1c, #062b30 52%, #031426);
+      background: #020b16;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(13, 179, 123, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 15% 50%, rgba(255, 82, 140, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(255, 202, 64, 0.15) 0%, transparent 40%);
+      background-attachment: fixed;
+      overflow-x: hidden;
     }
 
     a {
@@ -53,249 +55,336 @@
       margin: auto;
     }
 
+    /* HEADER & PORTADA */
     header {
       text-align: center;
-      padding: 28px 0 10px;
+      padding: 40px 0 10px;
     }
 
-    .diamante {
-      display: inline-block;
-      color: var(--oro);
-      font-size: 40px;
-      text-shadow: 0 0 22px rgba(245,212,119,.7);
-      animation: brillo 3s ease-in-out infinite;
+    .logo-contenedor {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 10px 0;
+    }
+
+    .diamante-header {
+      color: var(--oro-emprender);
+      font-size: clamp(32px, 6vw, 55px);
+      filter: drop-shadow(0 0 15px rgba(255, 202, 64, 0.8));
+      animation: pulsoBrillo 2.5s ease-in-out infinite;
     }
 
     .logo {
       font-family: Georgia, "Times New Roman", serif;
-      color: var(--oro);
-      font-size: clamp(39px, 8vw, 76px);
-      letter-spacing: 5px;
-      font-weight: normal;
-      margin: 5px 0;
-      text-shadow: 0 4px 30px rgba(245,212,119,.23);
+      background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 50%, #e1b12c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: clamp(42px, 9vw, 82px);
+      letter-spacing: 6px;
+      font-weight: 800;
+      margin: 0;
+      text-shadow: 0 0 35px rgba(245, 212, 119, 0.3);
     }
 
     .sublogo {
-      letter-spacing: 3px;
-      font-size: 11px;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 600;
       color: #f8e7b1;
-      margin-top: 12px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      opacity: 0.9;
     }
 
+    /* HERO */
     .hero {
       text-align: center;
-      padding: 45px 0 48px;
+      padding: 35px 0 40px;
     }
 
     .etiqueta {
       display: inline-block;
-      color: var(--oro);
-      border: 1px solid var(--oro2);
+      color: var(--oro-light);
+      border: 1px solid var(--oro-emprender);
       border-radius: 50px;
-      padding: 10px 19px;
+      padding: 10px 22px;
       font-size: 11px;
+      font-weight: bold;
       letter-spacing: 2px;
-      background: rgba(245,212,119,.07);
+      background: rgba(255, 202, 64, 0.1);
+      box-shadow: 0 0 15px rgba(255, 202, 64, 0.15);
+      backdrop-filter: blur(5px);
     }
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(35px, 6vw, 61px);
-      line-height: 1.12;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.15;
       margin: 24px auto 18px;
     }
 
     h1 span {
-      display: inline-block;
-      color: var(--oro);
-      text-shadow: 0 0 25px rgba(245,212,119,.17);
+      background: linear-gradient(90deg, #ffca40, #fff2b3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 25px rgba(255, 202, 64, 0.3);
     }
 
     .intro {
-      max-width: 700px;
+      max-width: 680px;
       margin: auto;
       color: #e1ece7;
-      font-size: 16px;
-      line-height: 1.9;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
     .frase {
-      color: var(--oro);
+      color: var(--oro-light);
       font-family: Georgia, serif;
       font-style: italic;
-      font-size: clamp(22px, 4vw, 30px);
+      font-size: clamp(20px, 3.5vw, 28px);
       margin-top: 25px;
+      text-shadow: 0 0 10px rgba(255, 242, 179, 0.2);
     }
 
+    /* SECCIONES Y TARJETAS */
     .secciones {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      padding: 10px 0 55px;
+      gap: 28px;
+      padding: 20px 0 60px;
     }
 
     .tarjeta {
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(245,212,119,.8);
       border-radius: 24px;
-      padding: 30px 20px;
+      padding: 25px 20px 30px;
       text-align: center;
-      background: linear-gradient(155deg, #106447, #042c25 78%);
-      box-shadow: 0 15px 35px rgba(0,0,0,.3),
-                  inset 0 0 22px rgba(245,212,119,.04);
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .tarjeta::before {
-      content: "✧";
-      position: absolute;
-      top: -13px;
-      right: 12px;
-      font-size: 80px;
-      color: rgba(245,212,119,.11);
-      pointer-events: none;
+      background: rgba(13, 31, 53, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .tarjeta:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 22px 42px rgba(0,0,0,.38);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
-    .tarjeta.belleza {
-      background: linear-gradient(155deg, #854a60, #321c36 80%);
-      border-color: #efbdc8;
+    /* Tarjeta OMNILIFE */
+    .tarjeta.omnilife {
+      border-color: rgba(13, 179, 123, 0.5);
+    }
+    .tarjeta.omnilife:hover {
+      border-color: var(--verde-omni);
+      box-shadow: 0 10px 30px rgba(13, 179, 123, 0.3);
     }
 
+    /* Tarjeta SEYTU */
+    .tarjeta.seytu {
+      border-color: rgba(255, 82, 140, 0.5);
+    }
+    .tarjeta.seytu:hover {
+      border-color: var(--rosa-seytu);
+      box-shadow: 0 10px 30px rgba(255, 82, 140, 0.3);
+    }
+
+    /* Tarjeta EMPRENDER */
     .tarjeta.emprender {
-      background: linear-gradient(155deg, #806326, #30250c 80%);
+      border-color: rgba(255, 202, 64, 0.5);
+    }
+    .tarjeta.emprender:hover {
+      border-color: var(--oro-emprender);
+      box-shadow: 0 10px 30px rgba(255, 202, 64, 0.3);
     }
 
-    .icono {
-      width: 75px;
-      height: 75px;
-      display: grid;
-      place-items: center;
-      margin: 0 auto 17px;
-      border: 2px solid var(--oro);
-      border-radius: 50%;
-      color: var(--oro);
-      font-size: 35px;
-      background: rgba(0,0,0,.14);
-      box-shadow: 0 0 22px rgba(245,212,119,.12);
+    /* IMÁGENES ILUSTRATIVAS EN TARJETAS */
+    .imagen-tarjeta {
+      width: 100%;
+      height: 180px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .imagen-tarjeta img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .tarjeta:hover .imagen-tarjeta img {
+      transform: scale(1.08);
     }
 
     .tarjeta h2 {
       font-family: Georgia, serif;
-      font-size: 25px;
-      margin: 8px 0 14px;
+      font-size: 26px;
+      margin: 10px 0 12px;
+      color: #fff;
     }
 
     .tarjeta p {
-      min-height: 85px;
-      color: #f5eee3;
-      font-size: 14px;
-      line-height: 1.8;
-      margin: 0 0 22px;
+      color: #d1deda;
+      font-size: 14.5px;
+      line-height: 1.7;
+      margin: 0 0 25px;
+      flex-grow: 1;
     }
 
+    /* BOTONES INTERACTIVOS CON EFECTO DE LUZ */
     .boton {
-      display: block;
+      position: relative;
+      display: inline-block;
       width: 100%;
-      max-width: 290px;
-      margin: auto;
-      padding: 16px 13px;
+      padding: 16px 20px;
       border-radius: 50px;
-      background: linear-gradient(115deg, #fff0ad, #e9bd50 50%, #c28c25);
-      color: #14251d;
       font-size: 14px;
       font-weight: 800;
-      box-shadow: 0 6px 22px rgba(232,190,78,.23);
-      transition: transform .2s, filter .2s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #051322;
+      background: linear-gradient(90deg, #ffd700, #ffae00);
+      box-shadow: 0 5px 20px rgba(255, 174, 0, 0.3);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    /* Destello deslizante en los botones */
+    .boton::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      animation: destelloBoton 3.5s infinite;
     }
 
     .boton:hover {
-      transform: scale(1.035);
-      filter: brightness(1.09);
+      transform: scale(1.04);
+      box-shadow: 0 8px 25px rgba(255, 202, 64, 0.5);
+    }
+
+    .omnilife .boton {
+      background: linear-gradient(90deg, #10ac84, #1dd1a1);
+      color: #012418;
+      box-shadow: 0 5px 20px rgba(29, 209, 161, 0.3);
+    }
+    .omnilife .boton:hover {
+      box-shadow: 0 8px 25px rgba(29, 209, 161, 0.5);
+    }
+
+    .seytu .boton {
+      background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+      color: #2b040e;
+      box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+    }
+    .seytu .boton:hover {
+      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
     }
 
     .detalle {
-      color: #f5d88d;
+      color: var(--oro-light);
       font-size: 11px;
-      letter-spacing: .5px;
-      line-height: 1.9;
-      margin-top: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 18px;
+      opacity: 0.8;
     }
 
+    /* CONTACTO */
     .contacto {
-      margin: 0 auto 35px;
-      padding: 35px 22px;
+      margin: 10px auto 40px;
+      padding: 45px 25px;
       text-align: center;
-      border: 1px solid rgba(245,212,119,.55);
-      border-radius: 25px;
-      background: linear-gradient(120deg, rgba(9,57,54,.8), rgba(6,27,53,.92));
-      box-shadow: 0 12px 35px rgba(0,0,0,.22);
+      border: 1px solid rgba(255, 202, 64, 0.4);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(13, 31, 53, 0.9), rgba(5, 18, 34, 0.95));
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
     }
 
     .contacto h2 {
       font-family: Georgia, serif;
-      font-size: 32px;
-      color: var(--oro);
+      font-size: 34px;
+      color: var(--oro-light);
       margin: 10px 0;
     }
 
     .contacto p {
       color: #e6e9e0;
       line-height: 1.8;
+      font-size: 16px;
     }
 
     .numero {
-      color: var(--oro) !important;
-      font-size: clamp(26px, 5vw, 39px);
-      font-weight: bold;
+      color: var(--oro-emprender) !important;
+      font-size: clamp(30px, 6vw, 44px);
+      font-weight: 800;
       letter-spacing: 2px;
       margin: 20px 0;
+      text-shadow: 0 0 15px rgba(255, 202, 64, 0.3);
     }
 
     .marcas {
-      color: var(--oro);
-      letter-spacing: 2px;
+      color: var(--oro-emprender);
+      letter-spacing: 3px;
       margin-top: 30px;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: bold;
+      opacity: 0.8;
     }
 
     footer {
       text-align: center;
-      padding: 25px 12px;
-      color: #cbd8d2;
-      background: rgba(0,0,0,.2);
-      font-size: 12px;
-      line-height: 1.9;
+      padding: 30px 15px;
+      color: #a4b0be;
+      background: rgba(0,0,0,0.4);
+      font-size: 13px;
+      line-height: 1.8;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    @keyframes brillo {
-      0%, 100% { transform: scale(1); opacity: .85; }
-      50% { transform: scale(1.09); opacity: 1; }
+    /* ANIMACIONES */
+    @keyframes pulsoBrillo {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 12px rgba(255, 202, 64, 0.7)); }
+      50% { transform: scale(1.12); filter: drop-shadow(0 0 22px rgba(255, 202, 64, 1)); }
     }
 
-    @media (max-width: 760px) {
+    @keyframes destelloBoton {
+      0% { left: -60%; }
+      20% { left: 140%; }
+      100% { left: 140%; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
       .secciones {
         grid-template-columns: 1fr;
-        max-width: 470px;
+        max-width: 450px;
         margin: auto;
       }
 
-      .tarjeta p {
-        min-height: 0;
-      }
-
       .hero {
-        padding-top: 32px;
-      }
-
-      .logo {
-        letter-spacing: 3px;
+        padding-top: 20px;
       }
     }
 
@@ -303,7 +392,6 @@
       *, *::before, *::after {
         animation: none !important;
         transition: none !important;
-        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -311,8 +399,10 @@
 
 <body>
   <header class="contenedor">
-    <div class="diamante" aria-label="Diamante">◆</div>
-    <h2 class="logo">VISIONARY</h2>
+    <div class="logo-contenedor">
+      <span class="diamante-header" aria-hidden="true">◆</span>
+      <h2 class="logo">VISIONARY</h2>
+    </div>
     <p class="sublogo">TU BIENESTAR · TU BELLEZA · TU FUTURO</p>
   </header>
 
@@ -336,12 +426,14 @@
 
     <section class="secciones contenedor">
 
-      <article class="tarjeta">
-        <div class="icono" aria-hidden="true">✿</div>
+      <!-- TARJETA OMNILIFE -->
+      <article class="tarjeta omnilife">
+        <div class="imagen-tarjeta">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Nutrición y Bienestar Omnilife">
+        </div>
         <h2>Nutrición OMNILIFE</h2>
         <p>
-          Explorá opciones de nutrición, energía e hidratación.
-          Consultá por productos, presentaciones y precios.
+          Explorá opciones de nutrición, energía e hidratación de alto rendimiento. Consultá por productos, presentaciones y precios.
         </p>
         <a class="boton"
            href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20los%20productos%20de%20nutrici%C3%B3n%20OMNILIFE%20y%20sus%20precios."
@@ -351,12 +443,14 @@
         <div class="detalle">✧ NUTRICIÓN · ENERGÍA · HIDRATACIÓN ✧</div>
       </article>
 
-      <article class="tarjeta belleza">
-        <div class="icono" aria-hidden="true">✧</div>
+      <!-- TARJETA SEYTÚ -->
+      <article class="tarjeta seytu">
+        <div class="imagen-tarjeta">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Cosmética y Belleza Seytú">
+        </div>
         <h2>Belleza SEYTÚ</h2>
         <p>
-          Conocé cosmética, cuidado facial y rutinas de belleza
-          para descubrir qué opciones se adaptan a vos.
+          Conocé cosmética botánica, cuidado facial avanzado y rutinas de belleza diseñadas para resaltar tu mejor versión.
         </p>
         <a class="boton"
            href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20belleza%20SEYT%C3%9A."
@@ -366,12 +460,14 @@
         <div class="detalle">✧ CUIDADO FACIAL · COSMÉTICA ✧</div>
       </article>
 
+      <!-- TARJETA EMPRENDER -->
       <article class="tarjeta emprender">
-        <div class="icono" aria-hidden="true">◆</div>
+        <div class="imagen-tarjeta">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Emprender con VISIONARY">
+        </div>
         <h2>Emprendé con nosotros</h2>
         <p>
-          Conocé cómo funciona la venta directa y las herramientas
-          digitales para desarrollar tu propia actividad comercial.
+          Sumate al equipo VISIONARY. Conocé cómo funciona la venta directa y las herramientas digitales para desarrollar tu negocio.
         </p>
         <a class="boton"
            href="https://wa.me/5492995053620?text=Hola%2C%20quiero%20conocer%20la%20oportunidad%20de%20emprender%20con%20VISIONARY."
@@ -383,19 +479,20 @@
 
     </section>
 
+    <!-- CONTACTO -->
     <section class="contenedor contacto">
-      <div class="diamante">◆</div>
+      <div class="diamante-header" style="font-size: 32px;" aria-hidden="true">◆</div>
       <h2>¿Lo descubrimos juntos?</h2>
       <p>
         Escribinos y contanos qué te interesa.<br>
-        Estamos para orientarte.
+        Estamos para orientarte en tu próximo paso.
       </p>
       <p class="numero">299 505 3620</p>
 
-      <a class="boton"
+      <a class="boton" style="max-width: 320px; margin: auto;"
          href="https://wa.me/5492995053620?text=Hola%2C%20llegu%C3%A9%20a%20VISIONARY%20y%20quiero%20recibir%20informaci%C3%B3n."
          target="_blank" rel="noopener">
-        <span aria-hidden="true">●</span> HABLAR POR WHATSAPP
+        HABLAR POR WHATSAPP
       </a>
 
       <div class="marcas">◆ VISIONARY ◆ OMNILIFE ◆ SEYTÚ ◆</div>
@@ -403,7 +500,7 @@
   </main>
 
   <footer>
-    <div class="diamante">◆</div>
+    <div class="diamante-header" style="font-size: 20px;" aria-hidden="true">◆</div>
     <br>
     VISIONARY · Bienestar, belleza y emprendimiento.<br>
     Consultá las condiciones de cada producto y de la oportunidad comercial.
