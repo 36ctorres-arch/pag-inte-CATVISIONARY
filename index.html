@@ -2,553 +2,434 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#061326">
-  <meta name="description" content="VISIONARY: nutrición OMNILIFE, belleza SEYTÚ y oportunidades para emprender.">
-  <title>VISIONARY 💎 | Tu próximo paso comienza acá</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061326">
+<meta name="description" content="VISIONARY: nutrición OMNILIFE, belleza SEYTÚ y emprendimiento digital.">
+<title>VISIONARY 💎 | Tu próximo paso comienza acá</title>
 
-  <!-- VISTA PREVIA PARA FACEBOOK Y WHATSAPP -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_AR">
-  <meta property="og:title" content="VISIONARY 💎 | Tu próximo paso comienza acá">
-  <meta property="og:description" content="Descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
-  <meta property="og:url" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/">
-  <meta property="og:image" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/portada-visionary.png">
-  <meta property="og:image:alt" content="VISIONARY, bienestar, belleza y emprendimiento">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
+<!-- Vista previa para Facebook y WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="VISIONARY 💎 | Tu próximo paso comienza acá">
+<meta property="og:description" content="Descubrí nutrición OMNILIFE, belleza SEYTÚ y una oportunidad para emprender.">
+<meta property="og:url" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
+<meta property="og:image:alt" content="Imagen elegante dorada para VISIONARY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VISIONARY 💎">
+<meta name="twitter:description" content="Bienestar, belleza y emprendimiento.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VISIONARY 💎">
-  <meta name="twitter:description" content="Bienestar, belleza y emprendimiento.">
-  <meta name="twitter:image" content="https://36ctorres-arch.github.io/pag-inte-CATVISIONARY/portada-visionary.png">
+<style>
+:root {
+  --navy:#041326;
+  --navy2:#0c2442;
+  --gold:#f4c75e;
+  --gold-light:#fff0b3;
+  --white:#fffaf0;
+  --muted:#d1dbea;
+  --green:#13bd91;
+  --pink:#f34d91;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 5%,#11674a40,transparent 35%),
+    radial-gradient(ellipse at 85% 35%,#c18b2925,transparent 35%),
+    var(--navy);
+  overflow-x:hidden;
+}
+a { color:inherit;text-decoration:none; }
+.wrap { width:min(1160px,92%);margin:auto; }
 
-  <style>
-    :root {
-      --navy: #061326;
-      --navy2: #10294b;
-      --gold: #f3c85b;
-      --gold-light: #fff1b8;
-      --white: #f9f6ee;
-      --muted: #c3cfdf;
-      --green: #25c995;
-      --pink: #ff76a5;
-    }
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:19px 0;
+  border-bottom:1px solid #f4c75e45;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font:700 clamp(21px,4vw,34px) Georgia,serif;
+  letter-spacing:3px;
+}
+.diamond {
+  color:var(--gold);
+  font-size:35px;
+  animation:glow 2.5s infinite;
+}
+.brand-name {
+  color:var(--gold-light);
+  background:linear-gradient(120deg,#fff,var(--gold),#fff0b3);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.brand-sub {
+  display:block;
+  font:10px Arial,sans-serif;
+  letter-spacing:2px;
+  color:#e5d9b7;
+  margin-top:5px;
+}
+nav { display:flex;flex-wrap:wrap;gap:18px;font-size:12px; }
+nav a { color:var(--muted);transition:.25s; }
+nav a:hover { color:var(--gold); }
 
-    * { box-sizing: border-box; }
+.hero {
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  align-items:center;
+  gap:25px;
+  min-height:390px;
+  padding:35px 0 42px;
+}
+.hero-copy { padding:20px 0; }
+.script {
+  font:italic clamp(25px,4vw,42px) Georgia,serif;
+  color:#fff;
+}
+.hero h1 {
+  margin:4px 0 18px;
+  font:700 clamp(35px,6vw,63px)/1.08 Georgia,serif;
+  color:var(--gold);
+}
+.hero p {
+  color:#e3eaf3;
+  line-height:1.75;
+  max-width:510px;
+}
+.hero-photo {
+  min-height:320px;
+  border-radius:24px;
+  background:
+    linear-gradient(0deg,#04132688,transparent 60%),
+    url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  border:1px solid #f4c75e66;
+  box-shadow:0 15px 55px #0008;
+  position:relative;
+  overflow:hidden;
+}
+.hero-photo::after {
+  content:"💎";
+  position:absolute;
+  right:12%;
+  bottom:12%;
+  font-size:clamp(55px,8vw,90px);
+  filter:drop-shadow(0 0 20px #f4c75e);
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:1px solid var(--gold);
+  border-radius:30px;
+  padding:14px 20px;
+  margin:8px 6px 0 0;
+  color:#071326;
+  background:linear-gradient(135deg,#fff1b9,#e9b63f);
+  font-weight:800;
+  font-size:13px;
+  text-align:center;
+  cursor:pointer;
+  transition:transform .25s,box-shadow .25s;
+}
+.btn:hover {
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px #f4c75e44;
+}
+.btn-outline {
+  background:transparent;
+  color:var(--white);
+  border-color:#f4c75e;
+}
+.btn-green { background:var(--green);border-color:var(--green); }
+.btn-pink { background:var(--pink);border-color:var(--pink); }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 20px;
-    }
+.heading { text-align:center;padding:25px 0 20px; }
+.heading h2 { font:700 clamp(29px,4vw,42px) Georgia,serif;margin:0 0 12px; }
+.heading p { color:var(--muted);line-height:1.7; }
 
-    body {
-      margin: 0;
-      color: var(--white);
-      font-family: system-ui, Arial, sans-serif;
-      background:
-        radial-gradient(ellipse at 15% 5%, #137d6633, transparent 35%),
-        radial-gradient(ellipse at 90% 40%, #d9a72a20, transparent 38%),
-        var(--navy);
-      overflow-x: hidden;
-    }
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  padding:10px 0 65px;
+}
+.card {
+  --accent:var(--gold);
+  overflow:hidden;
+  border:1px solid color-mix(in srgb,var(--accent) 75%,transparent);
+  border-radius:22px;
+  background:linear-gradient(155deg,#0e2745,#030d1c);
+  box-shadow:0 15px 35px #0004;
+  transition:transform .3s,box-shadow .3s;
+}
+.card:hover { transform:translateY(-8px);box-shadow:0 24px 45px #0007; }
+.card.omni { --accent:var(--green); }
+.card.seytu { --accent:var(--pink); }
+.card.business { --accent:var(--gold); }
 
-    a { text-decoration: none; color: inherit; }
+.card-photo {
+  height:225px;
+  position:relative;
+  background-size:cover;
+  background-position:center;
+}
+.card-photo::after {
+  content:"";
+  position:absolute;
+  inset:40% 0 0;
+  background:linear-gradient(transparent,#041326);
+}
+.omni .card-photo {
+  background-image:url("https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=900&q=85");
+}
+.seytu .card-photo {
+  background-image:url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85");
+}
+.business .card-photo {
+  background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85");
+}
+.card-content { padding:22px; }
+.tag {
+  color:var(--accent);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.card h3 { font-size:27px;margin:10px 0; }
+.card p {
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+  min-height:74px;
+}
+.card .btn { display:flex;width:100%;margin:12px 0 0;border-color:var(--accent); }
+.card .btn-outline { background:transparent;color:var(--white); }
 
-    .wrap {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
+.about {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:center;
+  border:1px solid #f4c75e77;
+  border-radius:23px;
+  padding:25px;
+  margin-bottom:55px;
+  background:#0b1f36;
+}
+.about-photo {
+  min-height:230px;
+  border-radius:16px;
+  background:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85") center/cover;
+}
+.about h2 { font:700 clamp(26px,4vw,36px) Georgia,serif;color:var(--gold); }
+.about p { color:var(--muted);line-height:1.8; }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      padding: 20px 0;
-      border-bottom: 1px solid #f3c85b33;
-    }
+footer {
+  border-top:1px solid #f4c75e55;
+  text-align:center;
+  padding:28px 0 90px;
+  color:#c3cddd;
+  font-size:12px;
+  line-height:1.8;
+}
+.footer-logo { font:700 28px Georgia,serif;color:var(--gold); }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: clamp(19px, 4vw, 27px);
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.floating-wa {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:10;
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#18c77c;
+  color:#032719;
+  font-size:27px;
+  box-shadow:0 8px 28px #0008;
+  transition:transform .2s;
+}
+.floating-wa:hover { transform:scale(1.1); }
 
-    .gem {
-      color: var(--gold);
-      font-size: 32px;
-      filter: drop-shadow(0 0 12px #f3c85b88);
-      animation: glow 2.5s infinite;
-    }
+.reveal { opacity:0;transform:translateY(22px);transition:.7s; }
+.reveal.visible { opacity:1;transform:translateY(0); }
 
-    .brand-name {
-      background: linear-gradient(120deg, #fff, var(--gold-light), var(--gold));
-      color: transparent;
-      background-clip: text;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    nav a { transition: color .2s; }
-    nav a:hover { color: var(--gold); }
-
-    .hero {
-      text-align: center;
-      padding: 65px 0 55px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 9px 15px;
-      border: 1px solid #f3c85b66;
-      border-radius: 30px;
-      background: #f3c85b0c;
-      color: var(--gold-light);
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    .hero-gem {
-      font-size: 65px;
-      margin: 22px 0 5px;
-      animation: float 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px #f3c85b88);
-    }
-
-    h1 {
-      font: 800 clamp(40px, 9vw, 78px)/1.1 Georgia, serif;
-      margin: 10px 0 18px;
-      letter-spacing: 3px;
-    }
-
-    .gold-text {
-      background: linear-gradient(100deg, #fff1b8, #f3c85b, #fff8d9);
-      color: transparent;
-      background-clip: text;
-    }
-
-    .intro {
-      max-width: 700px;
-      margin: auto;
-      color: #dce5ef;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .phrase {
-      color: var(--gold-light);
-      font: italic clamp(20px, 4vw, 27px) Georgia, serif;
-      margin: 24px 0;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 19px;
-      border: 1px solid var(--gold);
-      border-radius: 15px;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: #061326;
-      font-size: 14px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform .25s, box-shadow .25s;
-      box-shadow: 0 7px 22px #f3c85b20;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 28px #f3c85b44;
-    }
-
-    .btn-outline {
-      background: #ffffff08;
-      border-color: #ffffff40;
-      color: var(--white);
-      box-shadow: none;
-    }
-
-    .section-heading {
-      text-align: center;
-      padding: 15px 0 25px;
-    }
-
-    .section-heading h2 {
-      font: 700 clamp(28px, 5vw, 40px) Georgia, serif;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      padding: 10px 0 65px;
-    }
-
-    .card {
-      --accent: var(--gold);
-      position: relative;
-      overflow: hidden;
-      padding: 23px;
-      border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-      border-radius: 24px;
-      background: linear-gradient(150deg, #112b4c, #071426);
-      box-shadow: 0 15px 35px #0003;
-      transition: transform .3s, border-color .3s, box-shadow .3s;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -65px;
-      right: -60px;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      background: var(--accent);
-      opacity: .13;
-      filter: blur(35px);
-      pointer-events: none;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-      box-shadow: 0 22px 45px #0006;
-    }
-
-    .omni { --accent: var(--green); }
-    .seytu { --accent: var(--pink); }
-    .emprender { --accent: var(--gold); }
-
-    .visual {
-      display: grid;
-      place-items: center;
-      height: 145px;
-      margin-bottom: 20px;
-      border-radius: 17px;
-      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 20%, transparent), #ffffff05 70%);
-      border: 1px solid #ffffff0d;
-    }
-
-    .visual span {
-      font-size: 66px;
-      transition: transform .35s;
-      filter: drop-shadow(0 8px 15px #0004);
-    }
-
-    .card:hover .visual span {
-      transform: scale(1.16) rotate(-5deg);
-    }
-
-    .tag {
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .card h3 {
-      font-size: 25px;
-      margin: 9px 0;
-    }
-
-    .card p {
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 14px;
-      min-height: 75px;
-    }
-
-    .card .btn {
-      display: flex;
-      width: 100%;
-      margin-top: 12px;
-      border-color: var(--accent);
-      background: var(--accent);
-    }
-
-    .card .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border-color: #ffffff30;
-    }
-
-    .about {
-      margin-bottom: 60px;
-      padding: 35px 25px;
-      text-align: center;
-      border: 1px solid #f3c85b44;
-      border-radius: 24px;
-      background: linear-gradient(120deg, #f3c85b0c, #ffffff05);
-    }
-
-    .about h2 {
-      font: 700 clamp(27px, 5vw, 38px) Georgia, serif;
-    }
-
-    .about p {
-      max-width: 720px;
-      margin: auto;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    footer {
-      border-top: 1px solid #ffffff1b;
-      padding: 25px 0 90px;
-      text-align: center;
-      color: #aebdd0;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    .floating-wa {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 10;
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #20c978;
-      color: #052216;
-      font-size: 27px;
-      box-shadow: 0 8px 25px #0008;
-      border: 2px solid #ffffff55;
-      animation: float 3s infinite;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .7s, transform .7s;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 7px #f3c85b55); }
-      50% { filter: drop-shadow(0 0 19px #f3c85bcc); }
-    }
-
-    @media (max-width: 780px) {
-      header { align-items: flex-start; }
-      nav { max-width: 165px; justify-content: flex-end; }
-      .cards { grid-template-columns: 1fr; max-width: 520px; margin: auto; }
-      .card p { min-height: 0; }
-      .hero { padding-top: 48px; }
-    }
-
-    @media (max-width: 430px) {
-      .brand { letter-spacing: 1px; }
-      .gem { font-size: 25px; }
-      .btn { width: 100%; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .reveal { opacity: 1; transform: none; }
-    }
-  </style>
+@keyframes glow {
+  0%,100% { filter:drop-shadow(0 0 4px #f4c75e66); }
+  50% { filter:drop-shadow(0 0 17px #f4c75ecc); }
+}
+@media(max-width:800px) {
+  header { align-items:flex-start; }
+  nav { max-width:180px;justify-content:flex-end;gap:12px; }
+  .hero { grid-template-columns:1fr;padding-top:25px; }
+  .hero-copy { text-align:center; }
+  .hero p { margin-left:auto;margin-right:auto; }
+  .hero-photo { min-height:250px; }
+  .cards { grid-template-columns:1fr;max-width:520px;margin:auto; }
+  .card p { min-height:0; }
+  .about { grid-template-columns:1fr; }
+}
+@media(max-width:430px) {
+  .brand { letter-spacing:1px; }
+  .diamond { font-size:27px; }
+  .brand-sub { letter-spacing:1px;font-size:8px; }
+  .btn { width:100%;margin:8px 0 0; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+  .reveal { opacity:1;transform:none; }
+}
+</style>
 </head>
 
 <body>
-  <header class="wrap">
-    <a class="brand" href="#inicio" aria-label="VISIONARY inicio">
-      <span class="gem">◆</span>
+<header class="wrap">
+  <a class="brand" href="#inicio">
+    <span class="diamond">♢</span>
+    <span>
       <span class="brand-name">VISIONARY</span>
-    </a>
-    <nav aria-label="Secciones">
-      <a href="#omnilife">OMNILIFE</a>
-      <a href="#seytu">SEYTÚ</a>
-      <a href="#emprender">EMPRENDÉ</a>
-    </nav>
-  </header>
+      <span class="brand-sub">BIENESTAR · BELLEZA · EMPRENDIMIENTO</span>
+    </span>
+  </a>
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#omnilife">OMNILIFE</a>
+    <a href="#seytu">SEYTÚ</a>
+    <a href="#emprender">EMPRENDÉ</a>
+  </nav>
+</header>
 
-  <main id="inicio">
-    <section class="hero wrap">
-      <div class="eyebrow">✦ BIENESTAR · BELLEZA · OPORTUNIDAD ✦</div>
-      <div class="hero-gem" aria-hidden="true">💎</div>
-      <h1><span class="gold-text">VISIONARY</span></h1>
-      <p class="intro">
+<main id="inicio">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <div class="script">Tu próximo paso</div>
+      <h1>COMIENZA ACÁ</h1>
+      <p>
         Descubrí nuevas posibilidades de bienestar, cuidado personal
         y emprendimiento digital. Explorá nuestras propuestas y elegí
         el próximo paso para vos.
       </p>
-      <p class="phrase">Tu próximo paso comienza acá.</p>
+      <a class="btn" href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20VISIONARY" target="_blank" rel="noopener">
+        ☎ HABLAR POR WHATSAPP
+      </a>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Fotografía elegante con detalles de joyería y brillo"></div>
+  </section>
 
-      <div class="actions">
-        <a class="btn" href="#propuestas">✨ Descubrir propuestas</a>
-        <a class="btn btn-outline"
-           href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20VISIONARY"
-           target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
-      </div>
-    </section>
+  <section class="wrap" id="propuestas">
+    <div class="heading reveal">
+      <h2>Descubrí nuestras propuestas</h2>
+      <p>Bienestar, belleza y nuevas oportunidades para tu futuro.</p>
+    </div>
 
-    <section class="wrap" id="propuestas">
-      <div class="section-heading reveal">
-        <h2>Elegí tu camino</h2>
-        <p>Explorá las propuestas y tocá los botones para recibir información personalizada.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card omni reveal" id="omnilife">
-          <div class="visual" aria-hidden="true"><span>🌿</span></div>
+    <div class="cards">
+      <article class="card omni reveal" id="omnilife">
+        <div class="card-photo" role="img" aria-label="Fotografía de productos y bienestar"></div>
+        <div class="card-content">
           <span class="tag">Nutrición y bienestar</span>
           <h3>OMNILIFE</h3>
-          <p>Conocé las opciones de nutrición y bienestar y consultá sobre los productos.</p>
-          <a class="btn"
-             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20nutrici%C3%B3n%20OMNILIFE"
-             target="_blank" rel="noopener">Conocer OMNILIFE ↗</a>
-          <a class="btn btn-outline"
-             href="https://guia-seytu.omnilife.com/argentina"
-             target="_blank" rel="noopener">Ver guía de productos ↗</a>
-        </article>
+          <p>Conocé las opciones de nutrición y bienestar para acompañar tu rutina y tus objetivos personales.</p>
+          <a class="btn btn-green" href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20OMNILIFE" target="_blank" rel="noopener">
+            ☎ CONSULTAR POR WHATSAPP
+          </a>
+        </div>
+      </article>
 
-        <article class="card seytu reveal" id="seytu">
-          <div class="visual" aria-hidden="true"><span>✨</span></div>
+      <article class="card seytu reveal" id="seytu">
+        <div class="card-photo" role="img" aria-label="Fotografía de maquillaje y productos de belleza"></div>
+        <div class="card-content">
           <span class="tag">Belleza y cuidado personal</span>
           <h3>SEYTÚ</h3>
-          <p>Descubrí productos para tu rutina facial, maquillaje y cuidado personal.</p>
-          <a class="btn"
-             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20los%20productos%20SEYT%C3%9A"
-             target="_blank" rel="noopener">Descubrir SEYTÚ ↗</a>
-          <a class="btn btn-outline"
-             href="https://guia-seytu.omnilife.com/argentina"
-             target="_blank" rel="noopener">Ver catálogo ↗</a>
-        </article>
+          <p>Descubrí opciones de cuidado facial, maquillaje y belleza para sumar a tu rutina de todos los días.</p>
+          <a class="btn btn-pink" href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20conocer%20SEYT%C3%9A" target="_blank" rel="noopener">
+            ☎ CONSULTAR POR WHATSAPP
+          </a>
+          <a class="btn btn-outline" href="https://guia-seytu.omnilife.com/argentina" target="_blank" rel="noopener">
+            ✨ VER CATÁLOGO SEYTÚ ↗
+          </a>
+        </div>
+      </article>
 
-        <article class="card emprender reveal" id="emprender">
-          <div class="visual" aria-hidden="true"><span>🚀</span></div>
+      <article class="card business reveal" id="emprender">
+        <div class="card-photo" role="img" aria-label="Fotografía de espacio de trabajo y computadora"></div>
+        <div class="card-content">
           <span class="tag">Tu proyecto digital</span>
-          <h3>Emprendimiento</h3>
+          <h3>EMPRENDIMIENTO</h3>
           <p>Conocé cómo funciona la venta directa y cómo compartir tu proyecto desde el celular.</p>
-          <a class="btn"
-             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20emprender%20con%20VISIONARY"
-             target="_blank" rel="noopener">Quiero emprender ↗</a>
-          <a class="btn btn-outline"
-             href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20funciona%20la%20venta%20directa%20y%20digital"
-             target="_blank" rel="noopener">Cómo funciona ↗</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrap about reveal">
-      <div class="hero-gem" aria-hidden="true">💎</div>
-      <h2>Una idea puede abrir nuevas puertas</h2>
-      <p>
-        Escribinos para conocer las opciones, resolver tus dudas y recibir
-        información sin compromiso sobre productos, belleza y emprendimiento.
-      </p>
-      <div class="actions">
-        <a class="btn"
-           href="https://wa.me/5492995399926?text=Hola%2C%20llegu%C3%A9%20desde%20la%20p%C3%A1gina%20VISIONARY"
-           target="_blank" rel="noopener">Hablar con VISIONARY 💬</a>
-        <button class="btn btn-outline" type="button" id="shareBtn">Compartir página ↗</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="brand-name" style="font-size:22px;font-weight:900">VISIONARY 💎</div>
-      <p>Bienestar · Belleza · Emprendimiento</p>
-      <p>Consultá las indicaciones oficiales de cada producto.</p>
-      <p>© <span id="year"></span> VISIONARY</p>
+          <a class="btn" href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20emprender%20con%20VISIONARY" target="_blank" rel="noopener">
+            💎 QUIERO EMPRENDER
+          </a>
+          <a class="btn btn-outline" href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20funciona%20el%20emprendimiento" target="_blank" rel="noopener">
+            CÓMO FUNCIONA ↗
+          </a>
+        </div>
+      </article>
     </div>
-  </footer>
+  </section>
 
-  <a class="floating-wa"
-     href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20consultar%20por%20VISIONARY"
-     target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">✆</a>
+  <section class="about wrap reveal">
+    <div>
+      <div class="script">Una idea puede</div>
+      <h2>abrir nuevas puertas</h2>
+      <p>Escribinos para conocer las opciones, resolver tus dudas y recibir información sin compromiso.</p>
+      <a class="btn" href="https://wa.me/5492995399926?text=Hola%2C%20llegu%C3%A9%20desde%20la%20p%C3%A1gina%20VISIONARY" target="_blank" rel="noopener">
+        ☎ HABLAR POR WHATSAPP
+      </a>
+    </div>
+    <div class="about-photo" role="img" aria-label="Fotografía de tecnología y comunicación digital"></div>
+  </section>
+</main>
 
-  <script>
-    // Animación de tarjetas al desplazarse por la página.
-    const items = document.querySelectorAll('.reveal');
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">VISIONARY ♢</div>
+    <p>BIENESTAR · BELLEZA · EMPRENDIMIENTO</p>
+    <p>Juntos es mejor 💛</p>
+    <p>© <span id="year"></span> VISIONARY. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
+<a class="floating-wa"
+   href="https://wa.me/5492995399926?text=Hola%2C%20quiero%20consultar%20por%20VISIONARY"
+   target="_blank" rel="noopener" aria-label="Contactar a VISIONARY por WhatsApp">☎</a>
 
-      items.forEach(item => observer.observe(item));
-    } else {
-      items.forEach(item => item.classList.add('visible'));
-    }
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Compartir usando las opciones disponibles en el celular.
-    document.getElementById('shareBtn').addEventListener('click', async () => {
-      const data = {
-        title: 'VISIONARY 💎 | Tu próximo paso comienza acá',
-        text: 'Descubrí OMNILIFE, SEYTÚ y una oportunidad para emprender.',
-        url: window.location.href
-      };
-
-      try {
-        if (navigator.share) {
-          await navigator.share(data);
-        } else if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(window.location.href);
-          alert('¡Enlace copiado! Ya podés compartirlo.');
-        } else {
-          window.prompt('Copiá este enlace para compartir:', window.location.href);
-        }
-      } catch (error) {
-        if (error.name !== 'AbortError') {
-          window.prompt('Copiá este enlace para compartir:', window.location.href);
-        }
+const items = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
-  </script>
+  }, { threshold: 0.12 });
+  items.forEach(item => observer.observe(item));
+} else {
+  items.forEach(item => item.classList.add("visible"));
+}
+</script>
 </body>
 </html>
